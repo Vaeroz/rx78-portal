@@ -323,3 +323,15 @@
  .holo-booting .orbital-silhouette,
  .holo-booting .grade-node { animation: none; }
 }
+
+/* The orbital terminal fills wide displays; catalog pages retain their reading width. */
+.orbital-shell > header, .orbital-shell > main {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width:701px) {
+ .orbital-shell .orbital-home { max-height: none; }
+}
+
