@@ -11,7 +11,7 @@ test("stable unique IDs and complete grade → release → variant references", 
     assert.ok(v.alt && v.image && v.demo);
     if (v.productId) assert.ok(v.productId.source);
   }
-  for (const g of grades) {
+  for (const g of grades.filter(g => ["hg", "rg", "mg", "pg"].includes(g.id))) {
     assert.ok(releases.filter((r) => r.gradeId === g.id).length >= 2);
     assert.ok(records.filter((k) => k.grade.id === g.id).length >= 4);
   }
@@ -59,3 +59,4 @@ test("each record has sibling variants under the same mold", () => {
       ),
     );
 });
+

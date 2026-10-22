@@ -57,6 +57,11 @@ export const grades: Grade[] = [
       "The flagship experience. Large-scale engineering from the inside out.",
   },
 ];
+grades.push(
+  { id: "sd", name: "Super Deformed", scale: "NON-SCALE", description: "Compact, stylized proportions across Super Deformed collections." },
+  { id: "mega", name: "Mega Size", scale: "1/48", description: "Oversized builds in the Mega Size collection." },
+  { id: "misc", name: "Miscellaneous", scale: "VARIOUS", description: "Other formats and collections outside the main grade categories." },
+);
 export const releases: Release[] = [
   {
     id: "hg-original",
@@ -197,3 +202,4 @@ export function queryRecords(filters: Filters) {
           : (b.releaseYear ?? -Infinity) - (a.releaseYear ?? -Infinity),
     );
 }
+
