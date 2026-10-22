@@ -883,7 +883,7 @@ dd a {
   padding-top: 25px;
 }
 .about {
-  max-width: 900px;
+  max-width: none;
   min-height: 75vh;
 }
 .about h2 {
@@ -891,6 +891,7 @@ dd a {
   margin: 35px 0 15px;
 }
 .about > p:not(.intro) {
+  max-width: 75ch;
   font-size: 14px;
   line-height: 1.9;
   color: #52617b;
@@ -921,15 +922,7 @@ dd a {
 .skip:focus {
   top: 15px;
 }
-@media (min-width: 1500px) {
-  main,
-  header,
-  footer {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+.archive-shell > main, .archive-shell > header, .archive-shell > footer { width: 100%; max-width: none; margin-left: 0; margin-right: 0; }
 @media (max-width: 1100px) {
   header {
     gap: 20px;
@@ -1410,6 +1403,7 @@ dd a {
     font-size: 42px;
   }
   .about > p:not(.intro) {
+  max-width: 75ch;
     font-size: 13px;
   }
   .hierarchy {
@@ -1427,5 +1421,7 @@ dd a {
     scroll-behavior: auto !important;
   }
 }
+
+
 
 
